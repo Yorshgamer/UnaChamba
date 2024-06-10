@@ -86,7 +86,7 @@ public class login extends AsyncTask<String,String,String>{
         else {
             try {
 
-                String sql="SELECT * FROM Usuarios WHERE Usuarios = '"+usuario.getText()+"' AND Pass = '"+ Pass.getText()+ "'";
+                String sql="SELECT * FROM Usuarios WHERE userNombreUsuario = '"+usuario.getText()+"' AND userContrasena = '"+ Pass.getText()+ "'";
                 Statement stm = con.createStatement();
                 ResultSet rs= stm.executeQuery(sql);
 
