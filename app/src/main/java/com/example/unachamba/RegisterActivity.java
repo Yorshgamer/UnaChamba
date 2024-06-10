@@ -1,6 +1,9 @@
 package com.example.unachamba;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,17 +11,32 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class RegisterActivity extends AppCompatActivity {
+import com.example.unachamba.Connection.ConnetionBD;
 
+import java.sql.Connection;
+
+public class RegisterActivity extends AppCompatActivity {
+EditText nomapellidos, email, telefono, usuario, pass;
+Button resgitrar;
+TextView ingresar;
+Connection con;
+
+public RegisterActivity (){
+    ConnetionBD instanceConnection = new ConnetionBD();
+    con= instanceConnection.connect();
+}
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_register);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        nomapellidos=findViewById(R.id.txtnomapellidos);
+        email=findViewById(R.id.txtemail);
+        telefono=findViewById(R.id.txttelefono);
+        usuario=findViewById(R.id.txtusuario);
+        pass =findViewById(R.id.txtclave);
+        resgitrar=findViewById(R.id.btnregistrar);
+        ingresar=findViewById(R.id.lbliniciarsesion);
     }
 }
