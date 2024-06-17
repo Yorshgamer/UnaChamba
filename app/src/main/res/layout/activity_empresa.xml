@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Imagen de la Empresa -->
+        <ImageView
+            android:id="@+id/imageViewCompany"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/banner_background"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Nombre de la Empresa, Años de Experiencia, Asociados con -->
+        <TextView
+            android:id="@+id/textViewCompanyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre de la Empresa"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewExperience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Años de Experiencia: "
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textViewPartners"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asociados con: "
+            android:textSize="20sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Trabajadores que Necesitan -->
+        <TextView
+            android:id="@+id/textViewWorkersNeeded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trabajadores que Necesitan:"
+            android:textSize="20sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/textViewWorkersList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="* * * * * *"
+            android:textSize="20sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Descripción de la Empresa -->
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripción de la Empresa:"
+            android:textSize="20sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/textViewDescriptionContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis sagittis orci a fermentum."
+            android:textSize="16sp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Ubicación -->
+        <TextView
+            android:id="@+id/textViewLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ubicación:"
+            android:textSize="20sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/textViewLocationContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dirección de la empresa"
+            android:textSize="16sp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Contactos -->
+        <TextView
+            android:id="@+id/textViewContactHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contactos:"
+            android:textSize="20sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Teléfono"
+            android:inputType="phone"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar"
+            android:layout_gravity="center" />
+    </LinearLayout>
+</ScrollView>

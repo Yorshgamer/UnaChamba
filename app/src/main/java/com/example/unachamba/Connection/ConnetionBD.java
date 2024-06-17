@@ -10,9 +10,9 @@ import java.sql.SQLException;
 
 
 public class ConnetionBD {
-    private String ip = "192.168.18.24";
-    private String usuario = "sa";
-    private String password = "yortastic321";
+    private String ip = "11.11.11.11";
+    private String usuario = "dsffdssfd";
+    private String password = "sfdfdsfds";
     private String baseDatos = "Usuarios";
 
 

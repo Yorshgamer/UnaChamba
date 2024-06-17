@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/publish_2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E8F9"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".PubActivity">
+
+    <LinearLayout
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".RegisterActivity">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:background="@drawable/custom_edittext"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="643dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/publicText"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:text="Publicar"
+                    android:textAlignment="center"
+                    android:textColor="@color/principal"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="546dp"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/btnCancelar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:backgroundTint="@color/principal_a1"
+                            android:text="CANCELAR"
+                            android:textSize="18sp"
+                            app:cornerRadius="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.041"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.911" />
+
+                        <Button
+                            android:id="@+id/btnpublicar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:text="PUBLICAR"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.483"
+                            app:layout_constraintStart_toEndOf="@+id/btnCancelar"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.911"
+                            tools:backgroundTint="@color/principal_a1"
+                            tools:cornerRadius="20dp"
+                            tools:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/txtTituloTbrj"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/custom_edittext"
+                            android:drawablePadding="8dp"
+                            android:ems="10"
+                            android:hint="Título de Trabajo"
+                            android:inputType="textPassword"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/cardview_dark_background"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.06" />
+
+                        <EditText
+                            android:id="@+id/txtTarifa"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/custom_edittext"
+                            android:drawablePadding="8dp"
+                            android:ems="10"
+                            android:hint="Tarifa"
+                            android:inputType="textPassword"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/cardview_dark_background"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.189" />
+
+                        <EditText
+                            android:id="@+id/txtDisponibilidad"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/custom_edittext"
+                            android:drawablePadding="8dp"
+                            android:ems="10"
+                            android:hint="Disponibilidad"
+                            android:inputType="textPassword"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/cardview_dark_background"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.316" />
+
+                        <EditText
+                            android:id="@+id/txtDescripcionTbrj"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@drawable/custom_edittext"
+                            android:drawablePadding="8dp"
+                            android:ems="10"
+                            android:hint="Descripción"
+                            android:inputType="textPassword"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/cardview_dark_background"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.638" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</LinearLayout>

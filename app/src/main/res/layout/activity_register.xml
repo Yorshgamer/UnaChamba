@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:text="Registrarse"
                 android:textAlignment="center"
-                android:textColor="@color/design_default_color_secondary"
+                android:textColor="@color/principal"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -114,11 +114,11 @@
 
 
             <Button
-                android:id="@+id/btnregistrar"
+                android:id="@+id/btnCancelar"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="30dp"
-                android:backgroundTint="@color/design_default_color_secondary"
+                android:backgroundTint="@color/principal_a1"
                 android:text="REGISTRAR"
                 android:textSize="18sp"
                 app:cornerRadius="20dp" />
@@ -134,21 +134,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_edittext"
+        android:backgroundTint="@color/principal"
         android:padding="6dp"
         android:text="¿Ya Estas Registrado?"
         android:textAlignment="center"
-        android:textColor="#00BCD4"
-        android:textSize="18sp" />
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/lbliniciarsesion"
-        android:layout_width="wrap_content"
+        android:layout_width="156dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-10dp"
+        android:layout_marginTop="-5dp"
         android:background="@drawable/custom_edittext"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/principal"
+        android:gravity="center_horizontal"
         android:text="Iniciar Ahora"
-        android:textColor="#00BCD4"
+        android:textColor="@color/white"
         android:textSize="19sp"
         android:textStyle="bold" />
 

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">UnaChamba</string>
+    <string name="title_activity_pub_trabajo">activity_pubTrabajo</string>
 </resources>

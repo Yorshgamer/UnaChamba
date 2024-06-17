@@ -9,4 +9,12 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#1600ED</color>
     <color name="lblue">#3AD3F9</color>
+    <!-- COLORES PRINCIPALES DEL APPP -->
+    <color name="principal">#000e95</color>
+    <color name="principal_a1">#071ca8</color>
+    <color name="principal_a2">#0e2abb</color>
+    <color name="principal_a3">#1438ce</color>
+    <color name="principal_a4">#1b46e1</color>
+    <color name="principal_letras">#bbffff</color>
+
 </resources>

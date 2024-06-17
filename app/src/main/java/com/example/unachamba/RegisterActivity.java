@@ -8,12 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.util.Patterns;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.unachamba.Connection.ConnetionBD;
 
@@ -41,7 +39,7 @@ public RegisterActivity (){
         userCelular=findViewById(R.id.txttelefono);
         userNombreUsuario=findViewById(R.id.txtusuario);
         userContrasena =findViewById(R.id.txtclave);
-        registrar=findViewById(R.id.btnregistrar);
+        registrar=findViewById(R.id.btnCancelar);
         ingresar=findViewById(R.id.lbliniciarsesion);
 
         registrar.setOnClickListener(new View.OnClickListener() {
@@ -60,30 +58,43 @@ public RegisterActivity (){
         });
     }
     public void RegistrarUsuario(){
-    try {
-        if(con==null){
-            Toast.makeText(this, "Verifique su conexión", Toast.LENGTH_SHORT).show();
-            return;
-        }else {
-            PreparedStatement stm = con.prepareStatement("INSERT INTO Usuarios VALUES(?,?,?,?,?)");
-            stm.setString(1,userNombres.getText().toString());
-            stm.setString(2,userCelular.getText().toString());
-            stm.setString(3,userCorreoElectronico.getText().toString());
-            stm.setString(4,userNombreUsuario.getText().toString());
-            stm.setString(5,userContrasena.getText().toString());
-            stm.executeUpdate();
+        try {
+            // Validación de correo electrónico
+            String email = userCorreoElectronico.getText().toString();
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(this, "Ingrese un correo electrónico válido", Toast.LENGTH_SHORT).show();
+                return;
+            }
 
-            Toast.makeText(RegisterActivity.this, "Registro Agregado Correctamente", Toast.LENGTH_SHORT).show();
+            // Validación de número de celular
+            String celular = userCelular.getText().toString();
+            if (!celular.matches("\\d{9}")) {
+                Toast.makeText(this, "Ingrese un número de celular válido de 9 dígitos", Toast.LENGTH_SHORT).show();
+                return;
+            }
 
-            userNombres.setText("");
-            userCelular.setText("");
-            userCorreoElectronico.setText("");
-            userNombreUsuario.setText("");
-            userContrasena.setText("");
+            if (con == null) {
+                Toast.makeText(this, "Verifique su conexión", Toast.LENGTH_SHORT).show();
+                return;
+            } else {
+                PreparedStatement stm = con.prepareStatement("INSERT INTO Usuarios VALUES(?,?,?,?,?)");
+                stm.setString(1, userNombres.getText().toString());
+                stm.setString(2, userCelular.getText().toString());
+                stm.setString(3, userCorreoElectronico.getText().toString());
+                stm.setString(4, userNombreUsuario.getText().toString());
+                stm.setString(5, userContrasena.getText().toString());
+                stm.executeUpdate();
+
+                Toast.makeText(RegisterActivity.this, "Registro Agregado Correctamente", Toast.LENGTH_SHORT).show();
+
+                userNombres.setText("");
+                userCelular.setText("");
+                userCorreoElectronico.setText("");
+                userNombreUsuario.setText("");
+                userContrasena.setText("");
+            }
+        } catch (Exception e) {
+            Log.e("Error de conexión", e.getMessage());
         }
-        }catch (Exception e){
-        Log.e("Error de conexión",e.getMessage());
-
-    }
     }
 }
