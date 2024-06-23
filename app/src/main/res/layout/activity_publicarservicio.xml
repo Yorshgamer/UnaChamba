@@ -38,9 +38,9 @@
                     android:id="@+id/publicText"
                     android:layout_width="match_parent"
                     android:layout_height="58dp"
-                    android:text="Publicar"
+                    android:text="Publicar Servicio"
                     android:textAlignment="center"
-                    android:textColor="@color/principal"
+                    android:textColor="#B77400"
                     android:textSize="36sp"
                     android:textStyle="bold" />
 
@@ -58,7 +58,7 @@
                             android:id="@+id/btnCancelar"
                             android:layout_width="wrap_content"
                             android:layout_height="60dp"
-                            android:backgroundTint="@color/principal_a1"
+                            android:backgroundTint="#2B2E74"
                             android:text="CANCELAR"
                             android:textSize="18sp"
                             app:cornerRadius="20dp"
@@ -80,7 +80,7 @@
                             app:layout_constraintStart_toEndOf="@+id/btnCancelar"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.911"
-                            tools:backgroundTint="@color/principal_a1"
+                            tools:backgroundTint="#2B2E74"
                             tools:cornerRadius="20dp"
                             tools:textSize="18sp" />
 

@@ -21,13 +21,7 @@
             android:name=".RegistroEmpresaActivity"
             android:exported="false" />
         <activity
-            android:name=".EditarPerfilActivity"
-            android:exported="false" />
-        <activity
-            android:name=".EmpresaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ServiceActivity"
+            android:name=".PublicarServicioActivity"
             android:exported="false" />
         <activity
             android:name=".PubActivity"
