@@ -15,6 +15,9 @@
         android:theme="@style/Theme.UnaChamba"
         tools:targetApi="31">
         <activity
+            android:name=".ContactosActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegistroEmpresaActivity"
             android:exported="false" />
         <activity

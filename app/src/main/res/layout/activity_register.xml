@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:text="Registrarse"
                 android:textAlignment="center"
-                android:textColor="@color/principal"
+                android:textColor="#B77400"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -118,7 +118,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="30dp"
-                android:backgroundTint="@color/principal_a1"
+                android:backgroundTint="#2B2E74"
                 android:text="REGISTRAR"
                 android:textSize="18sp"
                 app:cornerRadius="20dp" />
@@ -135,7 +135,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:background="@drawable/custom_edittext"
-        android:backgroundTint="@color/principal"
+        android:backgroundTint="#2B2E74"
         android:padding="6dp"
         android:text="¿Ya Estas Registrado?"
         android:textAlignment="center"
@@ -149,7 +149,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="-5dp"
         android:background="@drawable/custom_edittext"
-        android:backgroundTint="@color/principal"
+        android:backgroundTint="#2B2E74"
         android:gravity="center_horizontal"
         android:text="Iniciar Ahora"
         android:textColor="@color/white"

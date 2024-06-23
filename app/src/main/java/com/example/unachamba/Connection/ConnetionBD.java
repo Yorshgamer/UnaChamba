@@ -10,10 +10,10 @@ import java.sql.SQLException;
 
 
 public class ConnetionBD {
-    private String ip = "11.11.11.11";
-    private String usuario = "dsffdssfd";
-    private String password = "sfdfdsfds";
-    private String baseDatos = "Usuarios";
+    private String ip = "19jakdashk3";
+    private String usuario = "sa";
+    private String password = "jkkjfs";
+    private String baseDatos = "sdfkjjk";
 
 
     @SuppressLint("NewApi")

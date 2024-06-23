@@ -18,7 +18,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class LoginActivity extends AppCompatActivity{
-EditText usuario, Pass;
+EditText nombreUsuario, contrasena;
 TextView lblRegistrar;
 Button btnIngresar;
 Connection con;
@@ -32,8 +32,8 @@ protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.login);
 
-    usuario=(EditText) findViewById(R.id.txtUsuario);
-    Pass=(EditText) findViewById(R.id.txtPass);
+    nombreUsuario =(EditText) findViewById(R.id.txtUsuario);
+    contrasena =(EditText) findViewById(R.id.txtPass);
     lblRegistrar=(TextView) findViewById(R.id.lblRegistrar);
     btnIngresar=(Button) findViewById(R.id.button);
 
@@ -86,7 +86,7 @@ public class login extends AsyncTask<String,String,String>{
         else {
             try {
 
-                String sql="SELECT * FROM Usuarios WHERE userNombreUsuario = '"+usuario.getText()+"' AND userContrasena = '"+ Pass.getText()+ "'";
+                String sql="SELECT * FROM Usuarios WHERE nombreUsuario = '"+ nombreUsuario.getText()+"' AND contrasena = '"+ contrasena.getText()+ "'";
                 Statement stm = con.createStatement();
                 ResultSet rs= stm.executeQuery(sql);
 
@@ -100,8 +100,8 @@ public class login extends AsyncTask<String,String,String>{
                         }
                     });
 
-                    usuario.setText("");
-                    Pass.setText("");
+                    nombreUsuario.setText("");
+                    contrasena.setText("");
 
                 }
                 else {

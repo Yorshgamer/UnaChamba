@@ -37,6 +37,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        ImageView imageView4 = findViewById(R.id.imageView4);
+        imageView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ContactosActivity.class);
+                startActivity(intent);
+            }
+        });
+
         TextView textView8 = findViewById(R.id.textView8);
         textView8.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, RegistroEmpresaActivity.class);

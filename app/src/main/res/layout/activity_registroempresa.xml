@@ -1,180 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/text"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:background="@drawable/custom_edittext"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/loginText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registrate Empresa"
+                android:textAlignment="center"
+                android:textColor="#B77400"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtnomempresa"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableLeft="@drawable/baseline_apartment_24"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:hint="Nombre y Apellidos"
+                android:inputType="text|textPersonName"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background" />
+
+            <EditText
+                android:id="@+id/txtnumero"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableLeft="@drawable/baseline_phone_iphone_24"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:hint="Numero de Contacto"
+                android:inputType="phone"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background" />
+
+            <EditText
+                android:id="@+id/txtrubro"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableLeft="@drawable/baseline_handshake_24"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:hint="Rubro"
+                android:inputType="text|textPersonName"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background" />
+
+            <EditText
+                android:id="@+id/txtusuarioempresa"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableLeft="@drawable/baseline_person_24"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:hint="Usuario"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background" />
+
+            <EditText
+                android:id="@+id/txtclaveempresa"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableLeft="@drawable/baseline_lock_24"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:hint="Contraseña"
+
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background" />
+
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#2B2E74"
+                android:text="REGISTRAR"
+                android:textSize="18sp"
+                app:cornerRadius="20dp" />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/lblp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginEnd="278dp"
-        android:text="Ingresar Rubro:"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_edittext"
+        android:backgroundTint="#2B2E74"
+        android:padding="6dp"
+        android:text="¿Ya Estas Registrado?"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
+        android:id="@+id/lbliniciarsesion"
+        android:layout_width="156dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginEnd="187dp"
-        android:text="Ingresar numero de contacto:"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreEmpresa" />
+        android:layout_marginTop="-5dp"
+        android:background="@drawable/custom_edittext"
+        android:backgroundTint="#2B2E74"
+        android:gravity="center_horizontal"
+        android:text="Iniciar Ahora"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/editTextText3"
-        android:layout_width="332dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="37dp"
-        android:layout_marginEnd="42dp"
-        android:ems="10"
-        android:hint="Ingresar rubro"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/textView10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-    <EditText
-        android:id="@+id/editTextText4"
-        android:layout_width="332dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginEnd="41dp"
-        android:ems="10"
-        android:hint="Ingrese nombre de usuario"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-    <TextView
-        android:id="@+id/lbl01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="173dp"
-        android:text="Ingresar nombre de la empresa:"
-        app:layout_constraintBottom_toTopOf="@+id/txtNombreEmpresa"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblRegistroEmpresa" />
-
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="330dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginEnd="43dp"
-        android:ems="10"
-        android:hint="Ingresar numero de contacto"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="206dp"
-        android:text="Elije un nombre de usuario"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginEnd="261dp"
-        android:text="Crear Contraseña"
-        app:layout_constraintBottom_toTopOf="@+id/txtContraseña"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
-
-    <EditText
-        android:id="@+id/txtNombreEmpresa"
-        android:layout_width="325dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="46dp"
-        android:ems="10"
-        android:hint="Ingrese nombre de la empresa"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl01" />
-
-    <TextView
-        android:id="@+id/lblRegistroEmpresa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="39dp"
-        android:layout_marginEnd="140dp"
-        android:text="Registro Empresa"
-        android:textColor="#000000"
-        android:textSize="29sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/lbl01"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/txtContraseña"
-        android:layout_width="329dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="42dp"
-        android:ems="10"
-        android:hint="Ingrese su contraseña"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/cbAceptarTerminos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-    <Button
-        android:id="@+id/btnConfirmar"
-        android:layout_width="148dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="133dp"
-        android:layout_marginEnd="130dp"
-        android:text="Confirmar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cbAceptarTerminos" />
-
-    <CheckBox
-        android:id="@+id/cbAceptarTerminos"
-        android:layout_width="331dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="42dp"
-        android:layout_marginEnd="39dp"
-        android:text="Aceptar los terminos y condiciones de uso"
-        app:layout_constraintBottom_toTopOf="@+id/btnConfirmar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtContraseña" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
